@@ -1,0 +1,38 @@
+.org-billing {
+  > .cards {
+    display: flex;
+    flex-flow: row wrap;
+    margin-left: -$padding-base-horizontal;
+    > .card {
+      flex: 1 auto;
+      margin: 0 0 $padding-base-vertical $padding-base-horizontal;
+    }
+  }
+  .cards > .card {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    border: 1px $gray-lighter solid;
+    padding: $padding-base-vertical $padding-base-horizontal;
+    box-shadow: 0 3px 6px $gray-lighter;
+    @media (min-width: $screen-sm-max) {
+      max-width: 275px;
+    }
+    > .title {
+      font-size: $font-size-h3;
+      text-align: center;
+    }
+    > .price {
+      display: block;
+      font-size: $font-size-h4;
+      font-weight: bold;
+      text-align: center;
+      padding-bottom: $padding-base-vertical;
+    }
+    > .desc {
+      padding-top: $padding-base-vertical;
+      border-top: 1px solid $gray-lighter;
+      margin-bottom: auto;
+    }
+  }
+}

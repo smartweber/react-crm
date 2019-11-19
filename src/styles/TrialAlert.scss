@@ -1,0 +1,27 @@
+.trial-alert {
+  text-align: center;
+  border-left: 0;
+  border-right: 0;
+  border: solid 1px #eee;
+  box-shadow: 0 6px 12px #eee;
+  background-color: #fcfcfc;
+  font-size: 16px;
+
+  .action {
+    margin-top: 10px;
+  }
+
+  .btn-primary {
+    font-size: 0.6em;
+    border-radius: 3px;
+    margin-left: 1em;
+    text-transform: uppercase;
+    padding-left: 18px;
+    padding-right: 18px;
+
+    &:active {
+      border-color: transparent;
+      background-color: #bfd230;
+    }
+  }
+}

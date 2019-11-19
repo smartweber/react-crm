@@ -1,0 +1,194 @@
+.ReactModal__Body--open,
+.-modal-open {
+  // Disable scrolling on document.body
+  overflow: hidden;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 3;
+  &.lti-launch {
+    > .modal-box {
+      > .header {
+        background-color: $lms-accessibility-color;
+      }
+      .btn-primary {
+        background-color: $lms-accessibility-color;
+        border-color: $lms-accessibility-color;
+      }
+      a {
+        color: $lms-accessibility-color;
+      }
+      .tab-container {
+        > .tab-menu {
+          > .tab-menuitem {
+            color: $lms-accessibility-color;
+            &[aria-selected=true] {
+              color: #555;
+            }
+          }
+        }
+      }
+      .chart-container {
+        .ct-series-a {
+          .ct-area {
+            fill: $lms-accessibility-color;
+          }
+          .ct-line {
+            stroke: $lms-accessibility-color;
+          }
+        }
+      }
+
+      &.exam-report {
+        .table tr.selected {
+          background-color: #0079C140;
+        }
+      }
+    }
+  }
+  > .modal-box {
+    max-width: 80%;
+    margin: 10px auto;
+  }
+}
+
+.modal-box {
+  position: relative;
+  background-color: #fff;
+  outline: 0;
+  overflow: hidden;
+  > .header {
+    padding: 15px;
+    margin: 0;
+    background-color: $brand-primary;
+    text-align: center;
+    color: #fff;
+  }
+  > .body {
+    padding: 15px;
+  }
+  > .footer {
+    padding: 0 15px 15px 15px;
+  }
+  &.-confirm,
+  &.-small {
+    max-width: 300px;
+    width: 100%;
+    margin: 30px auto;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  }
+}
+
+.modal-loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -2.5em;
+  margin-left: -2.5em;
+  color: $brand-primary;
+}
+
+.modal-box.-confirm {
+  > .body {
+    text-align: center;
+  }
+  > .footer > .btn-group {
+    width: 100%;
+  }
+  > .footer > .btn-group > .btn {
+    width: 50%;
+  }
+}
+
+.modal-box.-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  > .body {
+    text-align: center;
+    > .content {
+      margin: 1em 0;
+    }
+  }
+  > .footer > .btn-center {
+    display: flex;
+    place-content: center;
+  }
+}
+
+@media (min-width: $screen-sm-min) {
+  .modal-overlay {
+    > .modal-box {
+      margin: 30px auto;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+      width: 600px;
+      &.upload-status {
+        width: 768px;
+      }
+    }
+    .modal-box.-huge {
+      margin: 0;
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 30px;
+      width: auto;
+      min-height: 100%;
+    }
+    .modal-box.-huge>.body {
+      margin-bottom: 60px;
+    }
+    .modal-box.-huge>.footer {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 50px;
+    }
+    .modal-box .select-box {
+      width: 200px;
+    }
+  }
+}
+
+@media (min-width: $screen-md-min) {
+  .modal-overlay {
+    > .modal-box {
+      &.-large {
+        width: 900px;
+      }
+      &.-huge {
+        left: 15%;
+      }
+    }
+  }
+}
+
+@media (min-width: $screen-lg-min) {
+  .modal-overlay {
+    > .modal-box {
+      &.-huge {
+        left: 20%;
+      }
+    }
+  }
+}
+
+@media (max-width: $screen-sm-max) {
+  .modal-overlay {
+    > .modal-box {
+      &.-large {
+        max-width: calc( 100% - 20px);
+        width: 100%;
+      }
+    }
+  }
+}

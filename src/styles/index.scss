@@ -1,0 +1,69 @@
+$brand-primary: #75aa41; // green #75aa41
+$brand-deep-primary: #627B49;
+$brand-success: #bfd230; // lighter green #bfd320
+$brand-info:    #6495ed; // blue
+$brand-warning: #ffa500; // orange
+//$brand-danger:  #ed143d; // red
+$brand-danger:  #d0021b; // red
+$lms-accessibility-color: #0079C1;
+$text-color: #393839;
+$faint-text-color: rgba(0,0,0,.54);
+$grey-text-color: #ccc;
+$border-radius-base: 0;
+$border-radius-large: 0;
+$border-radius-small: 0;
+$fa-font-path: 'static';
+
+// Libraries + external components
+@import './bootstrap';
+@import './font-awesome';
+@import 'chartist/dist/scss/chartist';
+
+@import './animations';
+
+// Components
+@import './AnswerEditor';
+@import './AssistantEditor';
+@import './BluebookGradingModal';
+@import './Chart';
+@import './CourseList';
+@import './CourseViewer';
+@import './CSVImporter';
+@import './DatePicker';
+@import './DayPicker';
+@import './ExamGrader';
+@import './ExamReport';
+@import './ExamViewer';
+@import './FileInput';
+@import './FormContainer';
+@import './ImageLoader';
+@import './Modal';
+@import './MyGrade';
+@import './Navbar';
+@import './OMRLines';
+@import './OrgBilling';
+@import './OrgList';
+@import './OrgSelector';
+@import './PopoverMenu';
+@import './PrintInstructions';
+@import './ProfileManager';
+@import './ProgressSlider';
+@import './ResponseVerifier';
+@import './RosterEditor';
+@import './ScannerHome';
+@import './Select';
+@import './StripeCard';
+@import './StudentBillingOverview';
+@import './StudentCorrections';
+@import './TabContainer';
+@import './TagManager';
+@import './TimePicker';
+@import './TrialAlert';
+@import './UploadResults';
+@import './UsageReport';
+@import './UserManager';
+@import './WelcomePage';
+@import './misc';
+@import './UploadStatusTable';
+@import './SettingsModal';
+@import './AKITable';

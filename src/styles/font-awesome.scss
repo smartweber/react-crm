@@ -1,0 +1,22 @@
+/**
+ * Modified from font-awesome(@4.4.0)/scss/font-awesome.scss
+ */
+@import 'font-awesome/scss/variables';
+@import 'font-awesome/scss/mixins';
+// @import 'font-awesome/scss/path';
+// IE9+ just use .woff
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('#{$fa-font-path}/fontawesome-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@import 'font-awesome/scss/core';
+@import 'font-awesome/scss/larger';
+@import 'font-awesome/scss/fixed-width';
+// @import 'font-awesome/scss/list';
+// @import 'font-awesome/scss/bordered-pulled';
+@import 'font-awesome/scss/animated';
+@import 'font-awesome/scss/rotated-flipped';
+@import 'font-awesome/scss/stacked';
+@import 'font-awesome/scss/icons';

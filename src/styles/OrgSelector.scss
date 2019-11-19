@@ -1,0 +1,32 @@
+.org-selector-btn {
+  margin-bottom: 1em;
+  width: 160px;
+
+  > .icon {
+    margin-right: 0.5em;
+  }
+}
+
+.org-selector-menu {
+  > .header {
+    font-weight: 800;
+    padding: 2.5px 10px;
+    background-color: $gray-lighter;
+  }
+  > .item {
+    padding-left: 10px;
+    border-bottom: solid 1px #ccc;
+  }
+  > .item:last-child {
+    border-bottom: none;
+  }
+  .item > .fa {
+    margin-right: 5px;
+  }
+  > .item > .fa-check {
+    opacity: 0;
+  }
+  > .item.checked > .fa-check {
+    opacity: 1;
+  }
+}

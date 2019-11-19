@@ -1,0 +1,19 @@
+.tag-manager {
+  > .tags {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    align-content: flex-start;
+    // border-top: solid 1px #eee;
+    // border-bottom: solid 1px #eee;
+    padding-bottom: $padding-base-vertical;
+    // margin-top: $padding-large-vertical;
+    > .btn, > .input-group {
+      margin-left: $padding-base-horizontal;
+      margin-top: $padding-base-vertical;
+    }
+    > .input-group {
+      max-width: 16em;
+    }
+  }
+}

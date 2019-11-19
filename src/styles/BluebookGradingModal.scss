@@ -1,0 +1,83 @@
+.bluebook-grades {
+  >.body {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  >.body>.left {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  >.body>.right {
+    flex: 1 1 0;
+    width: 100%;
+    >.questions {
+      margin-bottom: 10px;
+    }
+    >.total {
+      margin: 15px auto;
+      font-size: 18px;
+      font-weight: bold;
+    }
+    >.btn-info {
+      margin-bottom: 15px;
+    }
+    >.textarea {
+      resize: vertical;
+    }
+    >.config {
+      border-bottom: solid 1px rgba(0, 0, 0, 0.2);
+    }
+    >.criteria>.check {
+      padding: 5px 0;
+    }
+    >.criteria>.check>.editable-text:not(:focus) {
+      padding-top: 0;
+      padding-right: 0;
+      padding-bottom: 2px;
+      height: auto;
+    }
+    >.criteria>.check>.points {
+      max-width: 8em;
+      display: inline-block;
+      margin-left: 5px;
+      font-weight: bold;
+    }
+  }
+
+  >.footer {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+  >.footer>.progress-slider {
+    width: 350px;
+    display: none;
+  }
+}
+
+@media (min-width: $screen-sm-min) {
+  .bluebook-grades>.body>.left {
+    width: 70%;
+    padding-right: 10px;
+    margin-bottom: 0;
+  }
+  .bluebook-grades>.body>.right {
+    width: auto;
+  }
+  .bluebook-grades>.footer>.progress-slider {
+    display: block;
+  }
+}
+
+.editable-text {
+  @extend .form-control;
+  &:not(:focus) {
+    border: 0;
+    border-bottom: solid 1px rgba(0, 0, 0, 0);
+    box-shadow: none;
+  }
+  &:not(:focus):hover {
+    border-bottom: solid 1px rgba(0, 0, 0, 0.3);
+  }
+}

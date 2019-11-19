@@ -1,0 +1,20 @@
+.assistant-editor {
+  .body > .assistants {
+    > .line {
+      margin-bottom: 10px;
+    }
+    > .line > .remove {
+      background: 0;
+      border: 0;
+      padding: 0;
+      color: $brand-danger;
+      margin-right: 10px;
+    }
+    > .line > .email {
+      font-family: monospace;
+    }
+    > .input-group {
+      margin: 20px 0;
+    }
+  }
+}

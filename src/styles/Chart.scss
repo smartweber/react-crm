@@ -1,0 +1,60 @@
+.chart-container {
+  .ct-label.ct-horizontal {
+    font-size: $font-size-small;
+    color: $text-color;
+  }
+  .ct-series-a {
+    .ct-line,
+    .ct-bar {
+      stroke: $brand-primary;
+    }
+
+    .ct-area {
+      fill: $brand-primary;
+    }
+
+    .ct-point {
+      stroke: $brand-primary;
+    }
+  }
+}
+
+.chart-3 {
+  .ct-label {
+    color: $text-color;
+    font-size: 12px;
+  }
+}
+
+.responsive-chart {
+  > .chart-container {
+    width: 100%;
+    // Keep aspect ratio
+    padding-bottom: percentage(9 / 16);
+    position: relative;
+  }
+  > .chart-container > svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+.lti-launch {
+  .chart-container {
+    .ct-series-a {
+      .ct-line,
+      .ct-bar {
+        stroke: $lms-accessibility-color;
+      }
+  
+      .ct-area {
+        fill: $lms-accessibility-color;
+      }
+
+      .ct-point {
+        stroke: $lms-accessibility-color;
+      }
+    }
+  }
+}

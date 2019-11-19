@@ -1,0 +1,36 @@
+.tab-container > .tab-menu {
+  border-bottom: 1px solid $nav-tabs-border-color;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  @include clearfix;
+  > .tab-menuitem {
+    float: left;
+    margin-bottom: -1px;
+    color: $brand-primary;
+    padding: $nav-link-padding;
+    border: 1px solid rgba(0, 0, 0, 0);
+    cursor: pointer;
+    background: 0;
+  }
+  > .tab-menuitem:hover,
+  > .tab-menuitem:focus {
+    background-color: $nav-link-hover-bg;
+  }
+  > .tab-menuitem[aria-selected=true] {
+    color: #555;
+    cursor: default;
+    background-color: $nav-tabs-active-link-hover-bg;
+    border-color: $nav-tabs-border-color;
+    border-bottom-color: rgba(0, 0, 0, 0);
+  }
+  .tab-menuitem[disabled] {
+    cursor: not-allowed;
+    opacity: 0.65;
+    background-color: transparent;
+  }
+}
+
+.tab-container > .tab-panel {
+  padding-top: 15px;
+}

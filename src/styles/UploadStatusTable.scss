@@ -1,0 +1,83 @@
+@import 'pure-react-carousel/dist/react-carousel.es';
+
+.upload-status {
+    td {
+        vertical-align: middle !important;
+    }
+
+    th {
+        font-size: calc(100% + 2px);
+        font-weight: normal;
+    }
+
+    .fa-spinner {
+        color: $brand-primary;
+    }
+
+    .content-wrapper {
+        position: relative;
+        display: flex;
+        place-content: center;
+        align-items: center;
+        min-height: 2em;
+        max-width: 15em;
+        word-break: break-all;
+        width: max-content;
+
+        .fa {
+            font-size: 1.5em;
+        }
+
+        .fa-check {
+            color: $brand-primary;
+        }
+
+        .fa-exclamation {
+            color: $brand-danger;
+            cursor: pointer;
+        }
+
+        sup {
+            left: 0.5em;
+        }
+    }
+}
+
+.unsored-exam-view {
+    .carousel {
+        position: relative;
+
+        button.back {
+            position: absolute;
+            left: 0;
+            top: 50%;
+        }
+
+        button.next {
+            position: absolute;
+            right: 0;
+            top: 50%;
+        }
+    }
+
+    .carousel-item-container {
+        display: flex;
+        place-content: center;
+        height: 100%;
+
+        .img-carousel {
+            display: inline-block;
+            height: 100%;
+            width: auto;
+        }
+    }
+}
+
+.analysis-modal {
+    .spinner {
+        > .fa-spinner {
+            font-size: 26px;
+            color: $brand-primary;
+        }
+    }
+}

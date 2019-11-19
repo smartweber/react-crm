@@ -1,0 +1,60 @@
+.csv-importer {
+  > .body > .intro {
+    > .btn {
+      margin-bottom: $padding-base-vertical;
+    }
+    > textarea {
+      font-family: monospace;
+      width: 100%;
+      min-height: 100px;
+      margin-bottom: $padding-base-vertical;
+    }
+    > textarea.active {
+      border: dashed 2px $brand-primary;
+      padding: 1px;
+    }
+    > .file-input-containter {
+      display: flex;
+      flex-flow: row;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 6px;
+      > div {
+        flex: 1;
+        display: flex;
+        align-items: center;
+      }
+
+      .checkbox-wrapper {
+        > input[type=checkbox]:focus {
+          border: 1px solid;
+        }
+      }
+    }
+  }
+  > .body > .fields {
+    > .alert {
+      text-align: center;
+    }
+    > .input-group {
+      margin-bottom: $padding-base-vertical;
+      table-layout: fixed;
+      width: 100%;
+    }
+    > .input-group > .form-control-static {
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow-x: hidden;
+    }
+    > .input-group > .select-box {
+      width: 191px;
+    }
+    td {
+      font-family: monospace;
+      white-space: no-wrap;
+    }
+    td:last-child {
+      font-family: inherit;
+    }
+  }
+}

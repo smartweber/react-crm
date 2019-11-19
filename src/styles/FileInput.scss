@@ -1,0 +1,27 @@
+.file-input {
+  $box-padding: 30px;
+
+  background-color: $body-bg;
+  border: dashed 1px rgba(0, 0, 0, 0.25);
+  padding: $box-padding;
+  width: 100%;
+
+  >.detail >.fa {
+    font-size: 40px;
+  }
+  >.detail >.fa:hover,
+  &.--active >.detail >.fa {
+    color: $brand-primary;
+  }
+  &.--active {
+    border: dashed 2px $brand-primary;
+    padding: ($box-padding - 1);
+  }
+}
+
+@media (min-width: (320px + 1)) {
+  .file-input {
+    width: 320px;
+    height: 180px;
+  }
+}

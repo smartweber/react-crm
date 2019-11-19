@@ -1,0 +1,44 @@
+.exam-view {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  > .file-input {
+    margin-bottom: 15px;
+    height: auto;
+  }
+
+  .action-panel {
+    display: flex;
+    flex-direction: column;
+    > button {
+      flex: 1;
+    }
+  }
+}
+
+.exam-alert {
+  margin-top: 10px;
+  width: 100%;
+  order: 2;
+}
+
+.canvas-listitem {
+  a {
+    color: #0079C1;
+  }
+}
+
+@media (min-width: $screen-sm-min) {
+  .exam-view {
+    > .file-input {
+      flex: 1;
+      order: 1;
+      margin-left: $padding-base-horizontal;
+      margin-bottom: 0;
+    }
+    > .upload-results {
+      order: 2;
+    }
+  }
+}

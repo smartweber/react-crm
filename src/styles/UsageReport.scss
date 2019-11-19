@@ -1,0 +1,20 @@
+.usage-report {
+  label {
+    width: 11ch;
+    text-align: right;
+    margin-right: $padding-base-horizontal;
+  }
+  > .form-group > input {
+    width: auto;
+    display: inline-block;
+    text-align: right;
+  }
+  > .expandable-date-picker > .btn,
+  > .form-group > input,
+  > .form-group > .btn {
+    width: 130px;
+  }
+  .btn-link {
+    padding: 0;
+  }
+}

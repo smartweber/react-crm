@@ -1,0 +1,46 @@
+.upload-results {
+  > .files {
+    width: 100%;
+    display: table;
+  }
+  > .alert {
+    margin: 15px 0 0 0;
+  }
+  > .files > .file {
+    display: table-row;
+  }
+  > .files > .file > * {
+    display: table-cell;
+    padding: 15px 8px 0 0;
+    vertical-align: middle;
+  }
+  > .files > .file > .name {
+    direction: rtl;
+    white-space: nowrap;
+    max-width: 250px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  > .files > .file > .size {
+    white-space: nowrap;
+    text-align: right;
+  }
+  > .files > .file > .status {
+    width: 100%;
+    padding-right: 0;
+    text-align: center;
+  }
+  > .files > .file > .status > .ok {
+    color: $brand-primary;
+  }
+  > .files > .file > .status > .fail {
+    color: $brand-danger;
+  }
+  > .files > .file > .status > .progress {
+    margin: 0;
+  }
+  > .alert > .uploadstatus {
+    animation: app-blink-lighter normal 4s infinite ease-in-out;
+    color: $brand-success;
+  }
+}

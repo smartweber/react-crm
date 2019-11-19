@@ -1,0 +1,104 @@
+.org-viewer,
+.course-viewer {
+  > .header small {
+    margin-left: 10px;
+    display: inline-block;
+  }
+  > .course-list,
+  > .exams {
+    margin-top: 48px;
+    clear: right;
+    > .list {
+      max-width: 600px;
+    }
+  }
+}
+
+.action-panel {
+  width: 100%;
+  max-width: 300px;
+
+  > .btn {
+    text-align: left;
+  }
+}
+
+.course-viewer.--loading {
+  > .header {
+    color: transparent;
+    small { color: transparent }
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+  > .exams > .list {
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    color: transparent;
+  }
+}
+
+.course-viewer > .exams {
+  > .list {
+    width: 100%;
+  }
+  > .list > .listitem {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    border-top: 1px solid $table-border-color;
+    padding: 12px 0;
+    > .alert {
+      width: 100%;
+      margin: 0;
+      margin-top: $padding-base-vertical;
+    }
+    > .cell {
+      display: flex;
+      align-items: center;
+      margin-left: $padding-base-horizontal;
+    }
+    > .cell:first-child {
+      margin: 0;
+    }
+    > .cell.date,
+    > .cell.arrow {
+      white-space: nowrap;
+    }
+    > .cell.name {
+      flex: 1;
+      display: block;
+      overflow-x: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+  > .list > .listitem > .cell.date > .btn {
+    padding: 0;
+    padding-right: $padding-base-horizontal;
+    &:disabled > .blankstatus {
+      animation: app-blink normal 4s infinite ease-in-out;
+      color: $text-color
+    }
+    > .uploadstatus {
+      animation: app-blink-lighter normal 4s infinite ease-in-out;
+      color: $brand-success;
+    }
+  }
+  .exam-view {
+    margin-top: $padding-large-vertical;
+  }
+}
+
+@media (min-width: $screen-sm-min) {
+  .org-viewer,
+  .course-viewer {
+    position: relative;
+    padding-right: 200px;
+    > .action-panel {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+
+  .action-panel {
+    width: auto;
+  }
+}

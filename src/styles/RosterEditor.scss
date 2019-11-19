@@ -1,0 +1,40 @@
+.roster-editor {
+  > .body .btn-group {
+    margin-bottom: 20px;
+  }
+  > .body .table {
+    td {
+      vertical-align: middle;
+    }
+    td:first-child {
+      white-space: nowrap;
+    }
+    td:not(:last-child) {
+      width: 1%;
+    }
+    .fa-ban, .fa-times {
+      color: $brand-danger;
+    }
+    .fa-edit {
+      color: $brand-info;
+    }
+    .fa-check {
+      color: $brand-primary;
+    }
+    .email, .sid {
+      font-family: monospace;
+      white-space: nowrap;
+    }
+    input.email, input.sid {
+      min-width: 200px;
+    }
+  }
+  > .body > .alert {
+    margin: 0 auto;
+  }
+}
+
+.roster-editor .table.-loading {
+  color: transparent;
+  text-shadow: 0 0 10px  rgba(0, 0, 0, 0.5);
+}

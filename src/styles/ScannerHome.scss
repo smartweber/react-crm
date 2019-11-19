@@ -1,0 +1,66 @@
+.scanner-home {
+  max-width: 600px;
+  margin: 0 auto;
+  > .title {
+    text-align: center;
+  }
+  > .action-container {
+    flex-direction: row;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    place-content: space-between;
+
+    .alert-wrapper {
+      margin-right: 10px;
+
+      > .alert {
+        margin: 0;
+      }
+    }
+  }
+  > .search-box {
+    margin-bottom: $padding-base-vertical;
+  }
+  > .course {
+    clear: both;
+  }
+  > .course > .details {
+    text-align: center;
+    margin: $padding-large-vertical auto;
+    > .name {
+      font-size: $font-size-h4;
+    }
+    > .term {
+      margin-left: 1em;
+    }
+    > .owner {
+      display: block;
+    }
+  }
+  > .alert {
+    margin: $padding-base-vertical auto;
+  }
+  > .course > .picker {
+    > .file-input {
+      margin-bottom: 15px;
+      height: auto;
+    }
+  }
+  > .report {
+    width: 100%;
+  }
+
+  @media (min-width: (320px + 1)) {
+    > .course > .picker {
+      max-width: 320px;
+      margin: 0 auto;
+    }
+  }
+  @media (min-width: $screen-sm-min) {
+    > .report {
+      float: right;
+      width: auto;
+    }
+  }
+}

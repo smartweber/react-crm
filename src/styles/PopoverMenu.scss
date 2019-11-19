@@ -1,0 +1,49 @@
+.popover-menu {
+  min-width: 160px;
+  max-width: 400px;
+  border: 1px solid #ccc;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  background-clip: padding-box;
+  background-color: $body-bg;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  z-index: 3;
+  outline: 0;
+
+  &.--flip {
+    box-shadow: 0 -6px 12px rgba(0, 0, 0, 0.175);
+  }
+  >.item {
+    display: block;
+    padding: 8px 20px;
+    color: #333;
+    white-space: nowrap;
+    cursor: pointer;
+    outline: 0;
+  }
+  >.item.btn-link {
+    width: 100%;
+    text-align: left;
+    margin: -1px;
+  }
+  >.item:focus,
+  >.item:hover  {
+    background-color: $brand-info;
+    color: #fff;
+  }
+}
+
+.popover-btn {
+  padding-right: 2em;
+  position: relative;
+  text-align: left;
+  text-overflow: ellipsis;
+  overflow-x: hidden;
+  > .fa-caret-down,
+  > .fa-caret-up {
+    position: absolute;
+    top: 0.5em;
+    right: 0.5em;
+  }
+}

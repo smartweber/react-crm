@@ -1,0 +1,17 @@
+.route-panel {
+  >.panel-heading>.path {
+    font-family: monospace;
+    padding: 0 1em;
+    word-break: break-all;
+  }
+  >.panel-heading>.btn-group {
+    display: block;
+    margin-left: 2em;
+    margin-top: 5px;
+    >.-GET{@extend .btn-primary}
+    >.-PUT{@extend .btn-info}
+    >.-POST{@extend .btn-success}
+    >.-PATCH{@extend .btn-warning}
+    >.-DELETE{@extend .btn-danger}
+  }
+}

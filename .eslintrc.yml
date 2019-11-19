@@ -1,0 +1,22 @@
+root: true
+extends: './node_modules/@cody-greene/eslint-config/strict.yml'
+plugins: ['react']
+env: {browser: true, node: true, es6: true}
+parser: 'babel-eslint'
+parserOptions:
+  ecmaVersion: 6
+  sourceType: 'module'
+  ecmaFeatures:
+    experimentalObjectRestSpread: true
+    impliedStrict: true
+    jsx: true
+rules:
+  react/jsx-key: 'warn'
+  react/jsx-no-duplicate-props: 'error'
+  react/jsx-no-literals: 'warn'
+  react/jsx-no-undef: 'error'
+  react/jsx-uses-react: 'error'
+  react/jsx-uses-vars: 'error'
+  react/no-unknown-property: 'error'
+  react/react-in-jsx-scope: 'error'
+  indent: ['warn', 2, {SwitchCase: 0, MemberExpression: 'off', flatTernaryExpressions: true}]

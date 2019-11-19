@@ -1,0 +1,15 @@
+.course-list {
+  > .list > .listitem {
+    width: 100%;
+    border-top: 1px solid $table-border-color;
+    padding: $table-cell-padding;
+  }
+  > .list > .listitem > a {
+    display: block;
+  }
+  > .list > .listitem > small {
+    white-space: nowrap;
+    display: inline-block;
+    margin-left: 10px;
+  }
+}

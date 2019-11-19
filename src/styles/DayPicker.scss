@@ -1,0 +1,18 @@
+.day-picker {
+  @extend .btn-group;
+  width: 100%;
+  >.btn {
+    @extend .btn-default;
+    width: 42px;
+  }
+}
+
+@media (max-width: $screen-xs-min) {
+  .day-picker {
+    >.btn:last-child {
+      clear: left;
+      margin-top: -1px;
+      margin-left: 0;
+    }
+  }
+}

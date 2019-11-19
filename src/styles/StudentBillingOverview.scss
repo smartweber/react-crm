@@ -1,0 +1,67 @@
+.student-billing-overview {
+  margin-bottom: 20px;
+  $containerWidth: 500px;
+
+  > .planinfo, > .paymentinfo, > .paymentedit {
+    display: flex;
+    align-items: baseline;
+    flex-flow: row wrap;
+    border-bottom: 1px $gray-lighter solid;
+    padding: $padding-large-vertical 0;
+    > label {
+      width: 100px;
+      font-weight: normal;
+      color: $gray-light;
+    }
+    > .text {
+      flex: 1;
+      width: 100%;
+      white-space: nowrap;
+    }
+  }
+
+  > .paymentinfo {
+    max-width: $containerWidth;
+    .btn-link.icon {
+      color: inherit;
+    }
+  }
+
+  > .planinfo {
+    max-width: $containerWidth;
+    > .plans {
+      margin-bottom: 50px;
+    }
+    > .plans > .alert-info {
+      text-align: center;
+    }
+    > .plans, > .btns, > .date {
+      width: 100%;
+    }
+    > .plans p, > .plans .radio, > .btns, > .date {
+      margin-left: 100px;
+    }
+  }
+
+  > .paymentedit {
+    max-width: $containerWidth;
+    align-items: center;
+  }
+
+  @media (max-width: $screen-sm-max) {
+    .planinfo > .btns {
+      margin-left: 0;
+    }
+    .paymentinfo > .btns {
+      margin-left: 100px;
+    }
+    .paymentedit {
+      flex-flow: column nowrap;
+      align-items: baseline;
+      > .btns {
+        margin-top: $padding-large-vertical;
+        align-self: flex-start;
+      }
+    }
+  }
+}

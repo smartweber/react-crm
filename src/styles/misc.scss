@@ -1,0 +1,115 @@
+.combo-box > select {
+  width: initial;
+  max-width: 40%;
+  float: left;
+}
+
+main.container {
+  margin-bottom: 20px;
+}
+
+.btn-loading {
+  background-size: 40px 40px;
+  @include gradient-striped;
+  @include animation(progress-bar-stripes 2s linear infinite);
+}
+
+.btn[aria-pressed=true] {
+  @extend .active;
+}
+
+.fa-file-pdf-o {color: $brand-danger}
+.fa-file-pdf-o.grey {color: grey}
+.action-icons > i {font-size: 18px; margin-left: 0.5em}
+.action-icons > i:first-child {margin-left: 0}
+
+.alert.alert-danger {
+  max-width: 600px;
+  text-align: center;
+}
+
+button:focus { outline: 0 !important }
+
+// fix off-center radio btns
+.radio > label > input[type=radio] { margin-top: 2px }
+
+a[disabled] {
+  cursor: not-allowed;
+  color: grey;
+}
+
+.input-group-btn > .btn {
+  // fix button addons
+  padding-bottom: ($padding-base-vertical + 1);
+}
+
+.alert-normal {
+  color: #f44336;
+  font-size: 1em;
+  padding: 0;
+}
+
+.login-form {
+  .alert {
+    .reset-link {
+      color: inherit;
+      text-decoration: underline;
+    }
+  }
+}
+
+.form-control {
+  &.error {
+    border-color: #a94442;
+  }
+}
+
+.lti-launch {
+  .checkbox {
+    .checkbox-wrapper {
+      &.checked {
+        border: solid 2px $lms-accessibility-color;
+        > .fa {
+          color: $lms-accessibility-color;
+        }
+      }
+    }
+  }
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  .checkbox-wrapper {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    padding: 0;
+    cursor: pointer;
+    overflow: hidden;
+    margin: 0 8px 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 2px #ccc;
+    box-shadow: 2px 2px 2px 0px #ccc;
+    flex-shrink: 0;
+    > .fa {
+      color: $brand-primary;
+      font-size: 14px;
+    }
+    &.checked {
+      border: solid 2px $brand-primary;
+      > .fa {
+        color: $brand-primary;
+      }
+    }
+  }
+  .checkbox-wrapper > .fa {
+    display: none;
+  }
+  .checkbox-wrapper > input:checked + .fa {
+    display: block;
+  }
+}

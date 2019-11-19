@@ -1,0 +1,77 @@
+.expandable-date-picker {
+  margin-bottom: $padding-base-vertical;
+  > label {
+    text-align: right;
+    margin-right: $padding-base-horizontal;
+    margin-top: $padding-base-vertical;
+  }
+  > .date-picker {
+    padding: 0;
+  }
+  > label, > .date-picker {
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+.date-picker {
+  width: 250px;
+  padding: 4px;
+  margin: 0 auto;
+  >.arrows {
+    width: 100%;
+    display: flex;
+  }
+  >.arrows>.mid {
+    font-weight: bold;
+    flex: 1;
+  }
+  >.arrows>.side {
+    width: 35px;
+  }
+
+  >.cells {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  >.cells>.cell {
+    height: 28px;
+    cursor: pointer;
+    flex: 0 0 (100% / 7);
+    position: relative; // for the absolute positioned "-today" tick
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+  }
+  >.cells.-big>.cell {
+    height: 50px;
+    flex-basis: (100% / 4);
+  }
+  >.cells>.cell.-header {
+    font-weight: bold;
+  }
+  >.cells>.cell:hover {
+    background-color: $gray-lighter;
+  }
+  >.cells>.cell[aria-selected=true] {
+    background-color: $brand-info;
+    color: #fff;
+  }
+  >.cells>.cell.-out {
+    color: #999999;
+  }
+  >.cells>.cell.-today:before {
+    border-bottom: 7px solid $brand-info;
+    border-left: 7px solid rgba(0, 0, 0, 0);
+    border-top-color: rgba(0, 0, 0, 0.2);
+    bottom: 4px;
+    content: '';
+    display: inline-block;
+    position: absolute;
+    right: 4px;
+  }
+  >.cells>.cell.-today[aria-selected=true]:before {
+    border-bottom-color: #fff;
+  }
+}

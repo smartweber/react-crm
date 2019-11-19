@@ -1,0 +1,34 @@
+.modal-box {
+    &.-setting {
+        a {
+            cursor: pointer;
+        }
+        .description,
+        .secret-container {
+            border-bottom: 1px solid $grey-text-color;
+            margin-bottom: 10px;
+        }
+        .secret-container {
+            > button {
+                margin-bottom: 15px;
+            }
+        }
+        .header {
+            background-color: $brand-deep-primary;
+        }
+        .btn.btn-primary {
+            background-color: $brand-deep-primary;
+        }
+    }
+}
+.clipboard-container {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+    > a {
+        margin-left: 1em;
+        white-space: nowrap;
+        text-decoration: none;
+    }
+}

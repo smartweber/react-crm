@@ -1,0 +1,15 @@
+.exam-grader {
+  td > input, td, th {
+    text-align: center;
+  }
+  .table > tbody > tr > td {
+    border: 0;
+    vertical-align: middle;
+    width: 33%;
+  }
+  a.text {
+    color: inherit !important;
+    text-decoration: none;
+    cursor: text;
+  }
+}

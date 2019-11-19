@@ -1,0 +1,65 @@
+.omr-lines {
+  $checkbox-size: 28px;
+  $label-width: 35px;
+  $scroll-padding: 25px;
+
+  width: ($checkbox-size * 5) + ($padding-small-horizontal * 6) + $label-width + $scroll-padding;
+  font-weight: bold;
+  line-height: $checkbox-size;
+
+  > .header {
+    text-align: center;
+  }
+  > .body {
+    max-height: 500px;
+    overflow-y: auto;
+  }
+  > .header, > .body {
+    padding-right: $scroll-padding;
+  }
+  > .header > *:first-child,
+  > .body > .options > *:first-child {
+    width: $label-width;
+    text-align: right;
+    margin: 0;
+  }
+  > .body > .options,
+  > .header {
+    display: flex;
+    justify-content: space-between;
+  }
+  > .header > .opt,
+  > .body > .options > .opt {
+    width: $checkbox-size;
+    height: $checkbox-size;
+
+    // Clicking a <label> will focus (scroll to) its <input>
+    // this will prevent annoying scrolling for the absolute positioned (hidden) <input>
+    position: relative;
+  }
+  > .body > .options {
+    margin-top: $padding-small-vertical;
+  }
+  > .body > .options > .opt {
+    cursor: pointer;
+    border: solid 1px #000;
+    overflow: hidden;
+    margin: 0;
+  }
+  > .body > .options > .opt > .fa {
+    display: none;
+    font-size: $checkbox-size;
+    line-height: $checkbox-size;
+    margin: -2px 2px;
+  }
+  > .body > .options > .opt > input:checked + .fa {
+    display: block;
+  }
+
+  > .body > .options > .op-btn {
+    font-family: monospace;
+    font-size: 1.25em;
+    background: 0;
+    border: 0;
+  }
+}

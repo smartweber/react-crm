@@ -1,0 +1,29 @@
+.time-picker {
+  display: flex;
+  align-items: center;
+  padding-right: 5px;
+  > .chunk {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 5px;
+  }
+  > .chunk > button {
+    border: solid 1px rgba(0, 0, 0, 0);
+    background: 0;
+  }
+  > .chunk > button:hover {
+    border: solid 1px #adadad;
+    background-color: #e6e6e6;
+  }
+  >.chunk>.up,
+  >.chunk>.down {
+    font-size: 2em;
+    line-height: 1em;
+  }
+}
+
+.time-range {
+  display: flex;
+  align-items: center;
+}

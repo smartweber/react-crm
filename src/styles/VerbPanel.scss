@@ -1,0 +1,42 @@
+@mixin verb-panel-variant($color) {
+  > .header {
+    font-size: $font-size-h4;
+    line-height: $font-size-h4;
+    border: none;
+    padding: $padding-base-vertical $padding-base-horizontal;
+    width: 100%;
+    display: block;
+    max-width: 300px;
+    text-align: left;
+    background-color: rgba($color, 0.70);
+  }
+  > .header > .verb {
+    font-family: monospace;
+  }
+  > .body {
+    border: solid 1px rgba($color, 0.3);
+    padding: $padding-base-vertical $padding-base-horizontal;
+  }
+}
+
+.verb-panel {
+  &.-GET {
+    @include verb-panel-variant($brand-primary);
+  }
+  &.-PUT {
+    @include verb-panel-variant($brand-info);
+  }
+  &.-POST {
+    @include verb-panel-variant($brand-success);
+  }
+  &.-PATCH {
+    @include verb-panel-variant($brand-warning);
+  }
+  &.-DELETE {
+    @include verb-panel-variant($brand-danger);
+  }
+}
+
+.verbs > .verb-panel:not(:first-child) {
+  margin-top: $padding-base-vertical;
+}

@@ -1,0 +1,61 @@
+.student-corrections {
+  > .body > .filter {
+    border-bottom: solid 1px #eee;
+    padding-bottom: $padding-base-vertical;
+    margin-bottom: $padding-base-vertical;
+    > label {
+      margin-right: 1em;
+    }
+    > .select-box {
+      display: inline-block;
+    }
+  }
+  .studentid {
+    font-family: monospace;
+  }
+  .studentname {
+    cursor: pointer;
+  }
+  .cell {
+    line-height: 30px;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    a.text {
+      color: inherit !important;
+      text-decoration: none;
+      cursor: text;
+    }
+  }
+  .cell.head {
+    font-weight: bold;
+  }
+  .cell.even {
+    background-color: $table-bg-accent;
+  }
+  .cell > button {
+    background: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    width: 100%;
+  }
+  .cell > button:hover {
+    background-color: $state-info-bg;
+  }
+  .cell > .studentname {
+    font-size: 0.9em;
+    text-align: left;
+    padding: 0 5px;
+  }
+  .cell > .answer {
+    display: block;
+    color: lighten($gray-base, 75%) !important;
+  }
+  .cell > .answer.wrong {
+    color: #fff !important;
+    background-color: $brand-danger;
+    margin: 1px;
+  }
+}

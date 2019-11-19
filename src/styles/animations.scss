@@ -1,0 +1,39 @@
+@keyframes app-blink {
+  0% { opacity: 1 }
+  25% { opacity: 0.4 }
+  50% { opacity: 1 }
+}
+
+@keyframes app-blink-lighter {
+  0% { opacity: 0.7 }
+  25% { opacity: 0.3 }
+  50% { opacity: 0.7 }
+}
+
+@keyframes fade-in {
+  0% { }
+  100% { opacity: 1 }
+}
+
+@keyframes sheen {
+  0% { }
+  25% { opacity: 0; width: 150%; }
+  100% { opacity: 0; width: 150%; }
+}
+
+@mixin animate-sheen() {
+  overflow: hidden;
+  position: relative;
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 200%;
+    background-color: #fff;
+    opacity: 0.4;
+    transform: skewX(25deg);
+    animation: sheen (0.65 * 4s) ease-out infinite;
+  }
+}

@@ -1,0 +1,47 @@
+.json-viewer {
+  font-family: monospace;
+  >.children {
+    padding-left: 1.5em;
+  }
+  .bracket {
+    font-weight: bold;
+  }
+  .value, .required {
+    color: #d70000;
+  }
+  .value.-type {
+    color: #008700;
+  }
+  .value.-number {
+    color: #005fdb;
+  }
+  .value.-boolean {
+    color: #008700;
+    font-weight: bold;
+  }
+  .value.-object {
+    color: #888;
+    font-weight: bold;
+  }
+  >.children>.description {
+    color: #888;
+    font-style: italic;
+    max-width: 500px;
+  }
+  >.expando {
+    cursor: pointer;
+    display: inline-block;
+  }
+  >.expando>.fa {
+    padding-right: 0.5em;
+  }
+  >.children>.child>.key {
+    float: left;
+    padding-right: 0.5em;
+    color: #ab00ab;
+  }
+}
+
+.json-viewer.-inline {
+  display: inline;
+}

@@ -1,0 +1,47 @@
+.print-instructions {
+  > .body > .btn-group {
+    width: 200px;
+    margin: 0 auto;
+    display: block;
+    clear: both;
+    > .btn { width: 50% }
+  }
+  > .body > img {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  > .body > ol {
+    padding-left: 20px;
+  }
+  > .body > .alert-scale {
+    float: left;
+    width: 50%;
+  }
+  > .body > .alert-scale {
+    width: 100%;
+  }
+}
+
+@media (min-width: $screen-xs-min) {
+  .print-instructions {
+    > .body > img {
+      width: 50%;
+      float: right;
+    }
+    > .body > ol {
+      margin-top: 50px;
+    }
+    > .body > .clear {
+      clear: both;
+    }
+  }
+}
+
+@media (min-width: 648px) {
+  .print-instructions {
+    > .body > .alert-scale {
+      float: left;
+      width: 50%;
+    }
+  }
+}

@@ -1,0 +1,42 @@
+.user-manager {
+  > .body .table {
+    td:not(.name) {
+      width: 1%;
+      white-space: nowrap;
+    }
+    .remove > button {
+      background: 0;
+      border: 0;
+      padding: 0;
+      color: $brand-danger;
+      visibility: hidden;
+    }
+    tr:hover > .remove > button {
+      visibility: visible;
+    }
+    .btn-link {
+      padding: 0;
+    }
+    .email {
+      font-family: monospace;
+    }
+  }
+  > .body > .user-adder {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: $screen-sm) {
+  .user-manager {
+    .table .remove > button {
+      visibility: visible !important;
+    }
+  }
+}
+
+.user-adder {
+  > .input-group {
+    margin-bottom: 15px;
+  }
+}

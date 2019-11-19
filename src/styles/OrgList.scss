@@ -1,0 +1,57 @@
+.org-list {
+  > .orgs {
+    display: flex;
+    flex-flow: row wrap;
+    margin-left: -15px;
+  }
+  > .orgs > .org {
+    flex: 1;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    margin-left: 15px;
+    max-width: 400px;
+    min-width: 250px;
+    width: 100%;
+    margin-bottom: 15px;
+    border: solid 1px $table-border-color;
+    box-shadow: 0 3px 6px $table-border-color;
+    > .orgbody {
+      padding: 10px;
+      text-align: center;
+    }
+    > .orgbody > .name {
+      font-size: 16px;
+      margin-top: 10px;
+    }
+    > .orgbody > .labels {
+      margin-top: 10px;
+    }
+    > .orgbody > .labels > .label {
+      margin-left: 15px;
+    }
+    > .orgactions {
+      border-top: solid 1px $table-border-color;
+      display: flex;
+      flex-flow: row;
+      > .btn {
+        flex: 1;
+        border-left: 0;
+        border-top: 0;
+        border-bottom: 0;
+        border-right: solid 1px $table-border-color;
+        &:last-child {
+          border-right: 0;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: $screen-sm-min) {
+  .org-list {
+    > .orgs > .org {
+      min-width: 400px;
+    }
+  }
+}

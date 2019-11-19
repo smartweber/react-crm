@@ -1,0 +1,48 @@
+.response-verifier > .body {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  .sheethead {
+    width: 100%;
+    > .image-loader {
+      padding-bottom: 36.33%;
+    }
+    text-align: center;
+    margin-bottom: $padding-base-vertical;
+  }
+  .studentid {
+    align-self: flex-end;
+    > .form-control {
+      width: 260px;
+      margin: 0 $padding-base-horizontal;
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+  .responses {
+    clear: both;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-flow: row wrap;
+    margin-bottom: $form-group-margin-bottom;
+    .snippets {
+      display: inline-block;
+      > .image-loader {
+        height: 28px;
+        min-width: 200px;
+        margin-top: $padding-base-vertical;
+        display: block;
+      }
+    }
+    .omr-lines {
+      display: inline-block;
+    }
+  }
+  .alert {
+    margin-top: 20px;
+    min-width: 250px;
+    max-width: 450px;
+    text-align: center;
+  }
+}

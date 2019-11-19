@@ -1,0 +1,229 @@
+.aki-table-conainer {
+  $checkbox-size: 24px;
+
+  &.lti-launch {
+    .weight {
+      background: $lms-accessibility-color !important;
+    }
+
+    .partial.response {
+      background: $lms-accessibility-color !important;
+    }
+
+    .and-col.exist {
+      background-color: $lms-accessibility-color;
+    }
+  }
+
+  .and-col {
+    text-align: center;
+    height: calc( 100% - 4px );
+    margin: 2px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &.exist {
+      background-color: $brand-primary;
+    }
+  }
+
+  .points-container {
+    .weight-panelty {
+      display: flex;
+      justify-content: center;
+
+      div {
+        flex: 1;
+      }
+    }
+  }
+
+  .header-table {
+    table {
+      width: calc( 100% - 17px);
+    }
+  }
+
+  .body-table {
+    max-height: 450px;
+    overflow-y: auto;
+  }
+
+  table {
+    width: 100%;
+    input {
+      text-align: center;
+    }
+    input[type=number]::-webkit-inner-spin-button, 
+    input[type=number]::-webkit-outer-spin-button { 
+      -webkit-appearance: none; 
+      margin: 0; 
+    }
+
+    thead {
+      border-bottom: 2px solid $text-color;
+      word-break: break-all;
+
+      th {
+        height: 40px;
+        text-align: center;
+      }
+
+      .advanced-th {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .advanced-header-container {
+          position: absolute;
+          z-index: 10;
+        }
+      }
+
+      .advanced-header-container {
+        display: flex;
+        flex-flow: row;
+        padding: 0 5px;
+        justify-content: center;
+        word-break: keep-all;
+
+        .fa {
+          cursor: pointer;
+          margin-left: 5px;
+        }
+      }
+
+      .pp-container {
+        text-align: center;
+      }
+    }
+
+    tbody {
+      tr {
+        border-bottom: 1px solid $text-color;
+
+        td {
+          height: 40px;
+
+          .extra-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+
+          .answer-container {
+            display: flex;
+            justify-content: center;
+          }
+
+          .value-wrapper {
+            height: calc( 100% - 8px );
+            margin: 4px 2px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &.error {
+              border: 2px solid $brand-danger;
+              input {
+                outline: none;
+              }
+            }
+
+            input {
+              width: 100%;
+              height: 100%;
+              background: transparent;
+              border: 0;
+              text-align: center;
+            }
+          }
+
+          .weight {
+            background: $brand-primary;
+            color: #fff;
+          }
+
+          .partial {
+            &.response {
+              background-color: $brand-primary;
+              color: #fff;
+            }
+
+            position: relative;
+            width: calc( 100% - 4px );
+
+            &:hover {
+              ._no-hover {
+                opacity: 0;
+              }
+
+              ._hover {
+                opacity: 1;
+              }
+            }
+
+            ._hover {
+              position: absolute;
+              top: 0;
+              opacity: 0;
+              width: 100%;
+              height: 100%;
+            }
+
+            ._no-hover  {
+              opacity: 1;
+            }
+          }
+        }
+
+        .extra-checbox {
+          width: $checkbox-size;
+          height: $checkbox-size;
+
+          // Clicking a <label> will focus (scroll to) its <input>
+          // this will prevent annoying scrolling for the absolute positioned (hidden) <input>
+          position: relative;
+          cursor: pointer;
+          border: 1px solid $grey-text-color;
+          overflow: hidden;
+          margin: 0;
+
+          > .fa {
+            display: none;
+            font-size: $checkbox-size;
+            line-height: $checkbox-size;
+            margin: -2px 2px;
+          }
+
+          input:checked + .fa {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+
+  .answer-input {
+    max-width: 4em;
+  }
+
+  .op-btn {
+    font-family: monospace;
+    font-size: 1.25em;
+    background: 0;
+    border: 0;
+  }
+
+  .point-input {
+    max-width: 3.3em;
+
+    &.error {
+      border: 2px solid $brand-danger;
+      outline: none;
+    }
+  }
+}
