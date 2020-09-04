@@ -113,7 +113,7 @@
     "loose-envify": "^1.1.0",
     "marked": "^0.3.6",
     "mocha": "^5.0.0",
-    "node-sass": "^4.1.1",
+    "node-sass": "^4.13.1",
     "react-test-renderer": "16.3.1",
     "rum": "^4.0.2",
     "source-map-support": "<1.0.0",
